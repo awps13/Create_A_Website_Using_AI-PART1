@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan - Dashboard Carteran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: #f0f2f5;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #1a237e;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #3949ab;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li:hover {
+            background: #3949ab;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .settings {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .settings h3 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h4 {
+            margin-bottom: 10px;
+            color: #3949ab;
+        }
+
+        .section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .section input[type="text"], .section input[type="password"], .section select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .section button {
+            padding: 10px 20px;
+            background: #1a237e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .section button:hover {
+            background: #3949ab;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2><a href="dashboard.html" style="text-decoration: none; color: white;">Dashboard Carteran</a></h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 <span>Beranda</span></a></li>
+            <li><a href="pesanan.html">📦 <span>Pesanan</span></a></li>
+            <li><a href="kendaraan.html">🚗 <span>Kendaraan</span></a></li>
+            <li><a href="pelanggan.html">👥 <span>Pelanggan</span></a></li>
+            <li><a href="driver.html">👨‍✈️ <span>Driver</span></a></li>
+            <li><a href="laporan.html">📊 <span>Laporan</span></a></li>
+            <li><a href="pengaturan.html">⚙️ <span>Pengaturan</span></a></li>
+            <li><a href="login.html">🚪 <span>Keluar</span></a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Pengaturan</h1>
+        </header>
+
+        <div class="settings">
+            <h3>Pengaturan Akun</h3>
+
+            <!-- Section Pengaturan Profil -->
+            <div class="section">
+                <h4>Profil</h4>
+                <label for="username">Nama Pengguna</label>
+                <input type="text" id="username" value="Nama Pengguna">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" value="email@example.com">
+
+                <button>Simpan Perubahan</button>
+            </div>
+
+            <!-- Section Pengaturan Kata Sandi -->
+            <div class="section">
+                <h4>Kata Sandi</h4>
+                <label for="old-password">Kata Sandi Lama</label>
+                <input type="password" id="old-password" placeholder="Masukkan kata sandi lama">
+
+                <label for="new-password">Kata Sandi Baru</label>
+                <input type="password" id="new-password" placeholder="Masukkan kata sandi baru">
+
+                <label for="confirm-password">Konfirmasi Kata Sandi Baru</label>
+                <input type="password" id="confirm-password" placeholder="Konfirmasi kata sandi baru">
+
+                <button>Ubah Kata Sandi</button>
+            </div>
+
+            <!-- Section Pengaturan Notifikasi -->
+            <div class="section">
+                <h4>Notifikasi</h4>
+                <label for="email-notif">Notifikasi Email</label>
+                <select id="email-notif">
+                    <option value="all">Semua Notifikasi</option>
+                    <option value="important">Hanya yang Penting</option>
+                    <option value="none">Nonaktifkan Notifikasi</option>
+                </select>
+
+                <button>Simpan Pengaturan Notifikasi</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

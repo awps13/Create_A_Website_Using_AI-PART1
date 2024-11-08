@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Driver - Dashboard Carteran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: #f0f2f5;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #1a237e;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #3949ab;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li:hover {
+            background: #3949ab;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .driver-list {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .driver-list h3 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        table th {
+            background: #1a237e;
+            color: white;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .actions button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .edit-btn {
+            background-color: #3949ab;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background-color: #5c6bc0;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background-color: #e53935;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .available {
+            background-color: #4caf50;
+        }
+
+        .on-duty {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2><a href="dashboard.html" style="text-decoration: none; color: white;">Dashboard Carteran</a></h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 <span>Beranda</span></a></li>
+            <li><a href="pesanan.html">📦 <span>Pesanan</span></a></li>
+            <li><a href="kendaraan.html">🚗 <span>Kendaraan</span></a></li>
+            <li><a href="pelanggan.html">👥 <span>Pelanggan</span></a></li>
+            <li><a href="driver.html">👨‍✈️ <span>Driver</span></a></li>
+            <li><a href="laporan.html">📊 <span>Laporan</span></a></li>
+            <li><a href="pengaturan.html">⚙️ <span>Pengaturan</span></a></li>
+            <li><a href="login.html">🚪 <span>Keluar</span></a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Daftar Driver</h1>
+        </header>
+
+        <div class="driver-list">
+            <h3>Driver Terdaftar</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Kontak</th>
+                        <th>Status</th>
+                        <th>Jumlah Tugas</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Driver 1 -->
+                    <tr>
+                        <td>Ali Akbar</td>
+                        <td>+62 812 3456 7890</td>
+                        <td><span class="status available">Tersedia</span></td>
+                        <td>25</td>
+                        <td class="actions">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <!-- Driver 2 -->
+                    <tr>
+                        <td>Rina Sari</td>
+                        <td>+62 812 9876 5432</td>
+                        <td><span class="status on-duty">Dalam Tugas</span></td>
+                        <td>15</td>
+                        <td class="actions">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <!-- Driver 3 -->
+                    <tr>
+                        <td>Yudi Prasetyo</td>
+                        <td>+62 812 1234 5678</td>
+                        <td><span class="status available">Tersedia</span></td>
+                        <td>30</td>
+                        <td class="actions">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
